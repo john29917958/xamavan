@@ -1,0 +1,115 @@
+@use "sass:map";
+
+$nav-height: 5rem;
+
+nav.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $nav-height;
+  line-height: $nav-height !important;
+  background-color: $white !important;
+
+  .container {
+    background-color: $white;
+  }
+
+  .nav-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+
+    .logo {
+      * {
+        margin-bottom: 0;
+        line-height: $nav-height;
+        text-decoration: none;
+        color: $gray-700;
+        font-size: x-large;
+      }
+
+      @media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+        margin-right: auto;
+      }
+    }
+
+    .nav-content {
+      display: none;
+
+      @media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+        display: initial;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        padding-left: 0;
+        margin-bottom: 0 !important;
+
+        li {
+          list-style-type: none;
+
+          a {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: inherit !important;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            transition: all ease 0.3s;
+            cursor: pointer;
+          }
+
+          a:hover {
+            color: $white !important;
+            background-color: $theme !important;
+          }
+        }
+      }
+    }
+
+    $nav-toggler-size: 1.7rem;
+
+    .nav-toggler {
+      position: absolute;
+      width: $nav-toggler-size;
+      height: $nav-toggler-size;
+      border: none;
+      background-color: inherit;
+      box-sizing: border-box;
+      top: calc(50% - $nav-toggler-size / 2);
+      right: 0;
+      margin: 0;
+      padding: 0;
+
+      .bar {
+        position: absolute;
+        width: 100%;
+        height: 0.1rem;
+        background-color: $text-default;
+      }
+
+      .bar:nth-of-type(1) {
+        top: 0;
+      }
+
+      .bar:nth-of-type(2) {
+        top: calc(50% - 0.1rem / 2);
+      }
+
+      .bar:nth-of-type(3) {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.nav-area {
+  width: 100%;
+  height: $nav-height;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
