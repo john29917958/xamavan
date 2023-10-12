@@ -103,6 +103,12 @@ nav.nav {
         bottom: 0;
       }
     }
+
+    @media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+      .nav-toggler {
+        display: none;
+      }
+    }
   }
 }
 
