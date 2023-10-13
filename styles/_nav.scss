@@ -1,31 +1,36 @@
 @use "sass:map";
 
-$nav-height: 5rem;
-
 nav.nav {
+  color: $text-default;
   position: fixed;
   top: 0;
   width: 100%;
   height: $nav-height;
-  line-height: $nav-height !important;
-  background-color: $white !important;
+  background-color: $white;
 
   .container {
     background-color: $white;
+    height: 100%;
   }
 
   .nav-wrapper {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center !important;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
     .logo {
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
       * {
-        margin-bottom: 0;
-        line-height: $nav-height;
+        margin: 0;
         text-decoration: none;
-        color: $gray-700;
+        color: inherit;
         font-size: x-large;
       }
 
@@ -36,6 +41,7 @@ nav.nav {
 
     .nav-content {
       display: none;
+      height: 100%;
 
       @media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
         display: initial;
@@ -46,25 +52,37 @@ nav.nav {
         flex-wrap: wrap;
         justify-content: left;
         padding-left: 0;
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
+        height: 100%;
+        align-items: center;
 
         li {
           list-style-type: none;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          height: 100%;
+          transition: all ease 0.3s;
+          cursor: pointer;
 
           a {
-            display: block;
-            height: 100%;
             text-decoration: none;
-            color: inherit !important;
+            color: inherit;
             padding-left: 1rem;
             padding-right: 1rem;
-            transition: all ease 0.3s;
-            cursor: pointer;
           }
 
-          a:hover {
-            color: $white !important;
-            background-color: $theme !important;
+          a.active {
+            color: $link-text-active;
+          }
+        }
+
+        li:hover {
+          color: $white;
+          background-color: $theme;
+
+          a {
+            color: inherit;
           }
         }
       }

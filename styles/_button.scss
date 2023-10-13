@@ -1,0 +1,20 @@
+.btn {
+  @include reset-elem;
+
+  font-size: $font-size-base;
+  background-color: $primary;
+  color: $white;
+  border-radius: 0.1rem;
+  padding: 0.9rem 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.btn:hover {
+  filter: brightness(105%);
+}
+
+.btn:active {
+  filter: brightness(113%);
+}
