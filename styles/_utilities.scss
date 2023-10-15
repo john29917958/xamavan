@@ -20,6 +20,10 @@
   background-color: $black;
 }
 
+.bg-black {
+  background-color: black;
+}
+
 .m-none {
   margin: 0;
 }
@@ -83,4 +87,11 @@
 .fill-parent {
   width: 100%;
   height: 100%;
+}
+
+.square {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
 }
