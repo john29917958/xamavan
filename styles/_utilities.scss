@@ -1,3 +1,75 @@
+@use "sass:map";
+
+.text-primary {
+  color: $text-primary;
+}
+
+.text-default {
+  color: $text-default;
+}
+
+.text-default-lighter {
+  color: $gray-500;
+}
+
+.text-white {
+  color: $white;
+}
+
+.bg-dark {
+  background-color: $black;
+}
+
+.m-none {
+  margin: 0;
+}
+
+.p-none {
+  padding: 0;
+}
+
+@for $i from 1 through 5 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+
+  .p-#{$i} {
+    padding: #{$i}rem;
+  }
+
+  .pt-#{$i} {
+    padding-top: #{$i}rem;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "md")) {
+  .p-md-none {
+    padding: 0;
+  }
+
+  @for $i from 1 through 5 {
+    .pt-md-#{$i} {
+      padding-top: #{$i}rem;
+    }
+
+    .pb-md-#{$i} {
+      padding-bottom: #{$i}rem;
+    }
+
+    .pl-md-#{$i} {
+      padding-left: #{$i}rem;
+    }
+
+    .pr-md-#{$i} {
+      padding-right: #{$i}rem;
+    }
+  }
+}
+
 .cover {
   background-color: $cover-color;
   width: 100%;
