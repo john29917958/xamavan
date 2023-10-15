@@ -5,6 +5,7 @@ $gray-700: #495057;
 $primary: #a0c6d9;
 $theme: $black;
 $text-default: #757575;
+$text-primary: $primary;
 $link-text-active: $primary;
 
 $grid-breakpoints: (
@@ -44,3 +45,5 @@ $font-sizes: (
 );
 
 $nav-height: 5rem;
+
+$cover-color: rgba(black, 0.7);

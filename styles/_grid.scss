@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
+  width: 100%;
 }
 
 @for $i from 1 through 12 {
