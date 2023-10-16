@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "style";
 
 #banner {
@@ -138,5 +139,13 @@
 
   .img-cover {
     background-color: $cover-color-darker;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+  #section-6 {
+    .container {
+      padding: 0;
+    }
   }
 }
