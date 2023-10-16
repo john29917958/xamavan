@@ -115,3 +115,12 @@
   padding-top: 100%;
   overflow: hidden;
 }
+
+@mixin max-lines($num-of-lines) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num-of-lines;
+  line-clamp: $num-of-lines;
+  -webkit-box-orient: vertical;
+}
