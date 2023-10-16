@@ -12,6 +12,10 @@
   color: $gray-500;
 }
 
+.text-light-gray {
+  color: $gray-400;
+}
+
 .text-white {
   color: $white;
 }
@@ -52,6 +56,14 @@
   .pb-#{$i} {
     padding-bottom: #{$i}rem;
   }
+
+  .pr-#{$i} {
+    padding-right: #{$i}rem;
+  }
+
+  .pl-#{$i} {
+    padding-left: #{$i}rem;
+  }
 }
 
 @media only screen and (min-width: map.get($grid-breakpoints, "md")) {
@@ -61,6 +73,10 @@
 
   .d-md-block {
     display: block;
+  }
+
+  .m-md-none {
+    margin: 0;
   }
 
   .p-md-none {
@@ -90,6 +106,26 @@
 
     .pr-md-#{$i} {
       padding-right: #{$i}rem;
+    }
+
+    .mb-md-#{$i} {
+      margin-bottom: #{$i}rem;
+    }
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
+  .m-lg-none {
+    margin: 0;
+  }
+
+  @for $i from 1 through 5 {
+    .pr-lg-#{$i} {
+      padding-right: #{$i}rem;
+    }
+
+    .pl-lg-#{$i} {
+      padding-left: #{$i}rem;
     }
   }
 }

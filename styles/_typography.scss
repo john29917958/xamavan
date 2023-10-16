@@ -54,6 +54,15 @@ p {
   line-height: $line-height-base;
 }
 
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .text-center {
   text-align: center;
   justify-content: center;

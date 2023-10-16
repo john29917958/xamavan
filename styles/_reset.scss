@@ -45,8 +45,8 @@ samp,
 small,
 strike,
 strong,
-sub,
-sup,
+// sub,
+// sup,
 tt,
 var,
 b,
@@ -110,7 +110,3 @@ ul {
 li {
   display: list-item;
 }
-
-@import "variables";
-@import "typography";
-/* This two lines should be removed and use the _typography.scss to set the font-family. */

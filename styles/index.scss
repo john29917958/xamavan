@@ -170,3 +170,13 @@
     @include max-lines(3);
   }
 }
+
+footer {
+  ul {
+    list-style: none;
+  }
+
+  .max-lines-2 {
+    @include max-lines(2);
+  }
+}
