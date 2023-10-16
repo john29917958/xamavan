@@ -55,6 +55,14 @@
     padding: 0;
   }
 
+  .pr-md-half {
+    padding-right: 0.5rem;
+  }
+
+  .pl-md-half {
+    padding-left: 0.5rem;
+  }
+
   @for $i from 1 through 5 {
     .pt-md-#{$i} {
       padding-top: #{$i}rem;

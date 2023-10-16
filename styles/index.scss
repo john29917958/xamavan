@@ -92,3 +92,40 @@
     }
   }
 }
+
+#section-4 {
+  .img {
+    padding-top: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .col:nth-of-type(1) {
+    .img {
+      background-image: url("https://picsum.photos/600/600?random=9");
+    }
+  }
+
+  .col:nth-of-type(2) {
+    .img {
+      background-image: url("https://picsum.photos/600/600?random=10");
+    }
+  }
+
+  .col:nth-of-type(3) {
+    .img {
+      background-image: url("https://picsum.photos/600/600?random=11");
+    }
+  }
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
