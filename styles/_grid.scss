@@ -3,7 +3,6 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
   width: 100%;
 }
 
@@ -51,4 +50,8 @@
       width: calc(100% * #{$i} / 12);
     }
   }
+}
+
+.align-self-end {
+  align-self: flex-end !important;
 }
