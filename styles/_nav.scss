@@ -1,0 +1,223 @@
+@use "sass:map";
+
+nav.nav {
+  color: $text-default;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $nav-height;
+  background-color: $white;
+  z-index: 999;
+
+  .nav-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    z-index: 2;
+
+    .container {
+      height: 100%;
+      background-color: inherit;
+
+      .nav-container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        box-sizing: border-box;
+        background-color: inherit;
+
+        .logo {
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+
+          * {
+            margin: 0;
+            text-decoration: none;
+            color: inherit;
+            font-size: x-large;
+          }
+
+          @media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+            margin-right: auto;
+          }
+        }
+
+        .nav-content {
+          display: none;
+          height: 100%;
+          background-color: inherit;
+
+          @media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+            display: initial;
+          }
+
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            padding-left: 0;
+            margin-bottom: 0;
+            width: 100vw;
+            height: 100%;
+            align-items: center;
+            background-color: inherit;
+
+            li {
+              list-style-type: none;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              transition: all ease 0.3s;
+              cursor: pointer;
+              background-color: inherit;
+
+              a {
+                text-decoration: none;
+                color: inherit;
+                padding-left: 1rem;
+                padding-right: 1rem;
+              }
+
+              a.active {
+                color: $link-text-active;
+              }
+            }
+
+            li:hover {
+              color: $white;
+              background-color: $theme;
+
+              a {
+                color: inherit;
+              }
+            }
+          }
+        }
+
+        $nav-toggler-size: 1.7rem;
+
+        .nav-toggler {
+          position: absolute;
+          width: $nav-toggler-size;
+          height: $nav-toggler-size;
+          border: none;
+          background-color: inherit;
+          box-sizing: border-box;
+          top: calc(50% - $nav-toggler-size / 2);
+          right: 0;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+
+          .bar {
+            position: absolute;
+            width: 100%;
+            height: 0.1rem;
+            background-color: $text-default;
+            transition: all ease 0.3s;
+          }
+
+          .bar:nth-of-type(1) {
+            top: 0;
+          }
+
+          .bar:nth-of-type(2) {
+            top: calc(50% - 0.1rem / 2);
+          }
+
+          .bar:nth-of-type(3) {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-cover {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+  nav.nav {
+    .nav-wrapper {
+      .container {
+        .nav-container {
+          .nav-content {
+            ul {
+              width: initial;
+
+              li {
+                width: initial;
+              }
+            }
+          }
+
+          .nav-toggler {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+nav.nav.toggled {
+  .nav-wrapper {
+    .container {
+      .nav-container {
+        .nav-content {
+          display: initial;
+        }
+
+        .nav-toggler {
+          .bar:nth-of-type(1),
+          .bar:nth-of-type(2) {
+            transform: rotate(45deg);
+            top: calc(50% - 0.1rem / 2);
+          }
+
+          .bar:nth-of-type(3) {
+            transform: rotate(-45deg);
+            top: calc(50% - 0.1rem / 2);
+          }
+        }
+      }
+    }
+  }
+
+  .nav-cover {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+  nav.nav.toggled {
+    .nav-cover {
+      display: none;
+    }
+  }
+}
+
+.nav-area {
+  width: 100%;
+  height: $nav-height;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,28 @@
+@use "sass:map";
+
+@mixin make-container($gutter: 1.5rem) {
+  box-sizing: border-box;
+  --ax-gutter-x: #{$gutter};
+  --ax-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--ax-gutter-x) * 0.5);
+  padding-left: calc(var(--ax-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  @include make-container();
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "md")) {
+  .container {
+    @include make-container(10rem);
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
+  .container {
+    @include make-container(30rem);
+  }
+}

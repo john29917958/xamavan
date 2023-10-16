@@ -1,0 +1,23 @@
+footer {
+  background-color: #282b2c;
+
+  ul {
+    li {
+      border-top: 0.1rem solid $gray-900;
+    }
+
+    li:nth-of-type(1) {
+      border-top: none;
+    }
+  }
+
+  hr {
+    height: 0.1rem;
+    background-color: $gray-900;
+    border: none;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

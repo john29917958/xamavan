@@ -1,0 +1,57 @@
+@use "sass:map";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(100% * #{$i} / 12);
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: calc(100% * #{$i} / 12);
+    }
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "md")) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: calc(100% * #{$i} / 12);
+    }
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: calc(100% * #{$i} / 12);
+    }
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xl")) {
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      width: calc(100% * #{$i} / 12);
+    }
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xxl")) {
+  @for $i from 1 through 12 {
+    .col-xxl-#{$i} {
+      width: calc(100% * #{$i} / 12);
+    }
+  }
+}
+
+.align-self-end {
+  align-self: flex-end !important;
+}
