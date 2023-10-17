@@ -70,13 +70,8 @@ nav.nav {
 
             li {
               list-style-type: none;
-              display: flex;
-              flex-wrap: wrap;
-              align-items: center;
               width: 100%;
               height: 100%;
-              transition: all ease 0.3s;
-              cursor: pointer;
               background-color: inherit;
 
               a {
@@ -84,19 +79,22 @@ nav.nav {
                 color: inherit;
                 padding-left: 1rem;
                 padding-right: 1rem;
+                display: block;
+                width: 100%;
+                height: 100%;
+                line-height: $nav-height;
+                background-color: inherit;
+                cursor: pointer;
+                transition: all ease 0.3s;
               }
 
               a.active {
                 color: $link-text-active;
               }
-            }
 
-            li:hover {
-              color: $white;
-              background-color: $theme;
-
-              a {
-                color: inherit;
+              a:hover {
+                color: $white;
+                background-color: $theme;
               }
             }
           }
