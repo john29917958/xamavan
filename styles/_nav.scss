@@ -7,6 +7,7 @@ nav.nav {
   width: 100%;
   height: $nav-height;
   background-color: $white;
+  text-transform: uppercase;
   z-index: 999;
 
   .nav-wrapper {
@@ -69,6 +70,7 @@ nav.nav {
             background-color: inherit;
 
             li {
+              position: relative;
               list-style-type: none;
               width: 100%;
               height: 100%;
@@ -95,6 +97,49 @@ nav.nav {
               a:hover {
                 color: $white;
                 background-color: $theme;
+              }
+            }
+
+            li.dropdown {
+              a.dropdown-toggle::after {
+                content: "";
+                display: inline-block;
+                border-top: 0.3rem solid;
+                border-right: 0.3rem solid transparent;
+                border-bottom: 0;
+                border-left: 0.3rem solid transparent;
+                vertical-align: 0.255rem;
+                margin-left: 0.6rem;
+                transition: all ease 0.3s;
+              }
+
+              .dropdown-menu {
+                position: absolute;
+                display: none;
+                top: 100%;
+                overflow: scroll;
+                height: auto;
+                z-index: 999;
+                width: 100%;
+
+                li {
+                  height: $nav-height;
+                }
+              }
+            }
+
+            li.dropdown.toggled {
+              a.dropdown-toggle {
+                color: $white;
+                background-color: $theme;
+              }
+
+              a.dropdown-toggle::after {
+                transform: rotate(180deg);
+              }
+
+              .dropdown-menu {
+                display: block;
               }
             }
           }
@@ -162,6 +207,12 @@ nav.nav {
 
               li {
                 width: initial;
+              }
+
+              li.dropdown {
+                .dropdown-menu {
+                  width: max-content;
+                }
               }
             }
           }
