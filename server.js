@@ -4,14 +4,15 @@ const fs = require("fs");
 const process = require("process");
 const app = express();
 
+app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/" + "index.html");
+  res.render("pages/index", { title: "Home" });
 });
 
 app.get("/portfolio/business-web-design-sample", (req, res) => {
-  res.sendFile(__dirname + "/public/business-web-design-sample.html");
+  res.render("pages/business-web-design-sample", { title: "Business Website" });
 });
 
 if (process.env.NODE_ENV === "production") {
