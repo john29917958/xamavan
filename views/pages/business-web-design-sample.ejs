@@ -1,47 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Web Sample | AX</title>
-    <meta name="description" content="A business web design." />
-    <meta
-      name="keywords"
-      content="AX,web,design,business,corporate,company,market"
-    />
-    <meta name="author" content="TZU-CHAO WANG" />
-    <meta name="author" content="AX" />
-    <link
-      rel="alternate"
-      href="https://rss.app/feeds/cKF8dTVysBhdvFWz.xml"
-      type="application/rss+xml"
-      title="RSS Feed for AX"
-    />
-    <meta name="theme-color" content="white" />
-    <meta name="msapplication-TileImage" content="favicon.ico" />
-    <meta name="msapplication-TileColor" content="white" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/images/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+    <%- include("../partials/head"); %>
     <link rel="stylesheet" href="/css/business-web-design-sample.css" />
   </head>
   <body>
@@ -540,6 +500,6 @@
         </div>
       </div>
     </footer>
-    <script src="/js/app.js"></script>
+    <%- include("../partials/scripts") %>
   </body>
 </html>
