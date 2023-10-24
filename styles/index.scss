@@ -2,12 +2,14 @@
 
 #banner {
   .title {
-    font-size: 9rem;
+    color: $gray-800;
+  }
+
+  .description {
     color: $gray-700;
   }
 
-  .subtitle {
-    color: darkgray;
+  .line-id {
     color: $gray-500;
   }
 }
