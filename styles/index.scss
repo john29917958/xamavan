@@ -1,13 +1,19 @@
 @import "ax";
 
 #banner {
+  color: $gray-600;
+
   .title {
-    font-size: 9rem;
     color: $gray-700;
   }
 
-  .subtitle {
-    color: darkgray;
-    color: $gray-500;
+  .btn-to-next-sect {
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-to-next-sect:hover,
+  .btn-to-next-sect:focus {
+    color: $black;
   }
 }
