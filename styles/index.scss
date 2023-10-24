@@ -1,15 +1,19 @@
 @import "ax";
 
 #banner {
-  .title {
-    color: $gray-800;
-  }
+  color: $gray-600;
 
-  .description {
+  .title {
     color: $gray-700;
   }
 
-  .line-id {
-    color: $gray-500;
+  .btn-to-next-sect {
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-to-next-sect:hover,
+  .btn-to-next-sect:focus {
+    color: $black;
   }
 }
