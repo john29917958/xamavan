@@ -8,7 +8,7 @@ const navbar = {
 function initToggleFeature(navbar: Element) {
   const navToggler = navbar.querySelector(".nav-toggler");
   navToggler?.addEventListener("click", () => {
-    toggleElem(navbar);
+    toggle(navbar);
   });
   const navCover = document.createElement("div");
   navCover.classList.add("nav-cover");
@@ -19,14 +19,13 @@ function initToggleFeature(navbar: Element) {
 }
 
 function initDropdowns(navbar: Element) {
-  const dropdownItems: NodeListOf<Element> =
-    navbar.querySelectorAll("li.dropdown");
-  for (const dropdownItem of dropdownItems) {
-    dropdownItem.addEventListener("click", function (e) {
-      toggleElem(dropdownItem);
-      const menu: HTMLElement = dropdownItem.querySelector(
-        ".dropdown-menu"
-      ) as HTMLElement;
+  const dropdowns: NodeListOf<Element> = navbar.querySelectorAll("li.dropdown");
+  for (const dropdown of dropdowns) {
+    const menu: HTMLElement = dropdown.querySelector(
+      ".dropdown-menu"
+    ) as HTMLElement;
+    dropdown.addEventListener("click", function (e) {
+      toggle(dropdown);
       const elemBounds: DOMRect = menu.getBoundingClientRect();
       const elemBottom: number = elemBounds.bottom;
       const windowBottom: number = window.innerHeight;
@@ -37,18 +36,19 @@ function initDropdowns(navbar: Element) {
         menu.style.height = "auto";
       }
       e.stopPropagation();
+      window.addEventListener("click", handleClickOutsideDropdown);
+
       function handleClickOutsideDropdown() {
-        toggleElem(dropdownItem);
+        toggle(dropdown);
         window.removeEventListener("click", handleClickOutsideDropdown);
       }
-      window.addEventListener("click", handleClickOutsideDropdown);
     });
   }
 }
 
-function toggleElem(elem: Element) {
-  const isToggled = elem.classList.contains("toggled");
-  if (isToggled) {
+function toggle(elem: Element) {
+  const isElemToggled = elem.classList.contains("toggled");
+  if (isElemToggled) {
     elem.classList.remove("toggled");
   } else {
     elem.classList.add("toggled");
