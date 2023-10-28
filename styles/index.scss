@@ -1,11 +1,7 @@
 @import "ax";
 
 #banner {
-  color: $gray-600;
-
-  .title {
-    color: $gray-700;
-  }
+  color: $gray-700;
 
   .btn-to-next-sect {
     transition: color 0.3s ease;
@@ -16,4 +12,8 @@
   .btn-to-next-sect:focus {
     color: $black;
   }
+}
+
+#action-section {
+  color: $gray-700;
 }
