@@ -3,17 +3,14 @@ const https = require("https");
 const fs = require("fs");
 const process = require("process");
 const app = express();
+const indexRouter = require("./routes/index");
+const portfolioRouter = require("./routes/portfolio");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.render("pages/index", { title: "Home" });
-});
-
-app.get("/portfolio/business-web-design-sample", (req, res) => {
-  res.render("pages/business-web-design-sample", { title: "Business Website" });
-});
+app.use("/", indexRouter);
+app.use("/portfolio", portfolioRouter);
 
 if (process.env.NODE_ENV === "production") {
   loadSslConfig(
