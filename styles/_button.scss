@@ -33,3 +33,28 @@
 .btn.btn-outline:active {
   background-color: rgba($color: $white, $alpha: 0.3);
 }
+
+.btn-scroll-down-to {
+  background: transparent;
+  border: none;
+  color: $gray-700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  i {
+    position: relative;
+  }
+}
+
+.btn-scroll-down-to:hover,
+.btn-scroll-down-to:active {
+  color: $black;
+}
+
+.btn-scroll-down-to:hover i {
+  top: 0.1rem;
+}
+
+.btn-scroll-down-to:active i {
+  top: 0;
+}

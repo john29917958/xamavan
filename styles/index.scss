@@ -2,16 +2,6 @@
 
 #banner {
   color: $gray-700;
-
-  .btn-to-next-sect {
-    transition: color 0.3s ease;
-    cursor: pointer;
-  }
-
-  .btn-to-next-sect:hover,
-  .btn-to-next-sect:focus {
-    color: $black;
-  }
 }
 
 #action-section {
