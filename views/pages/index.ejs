@@ -2,12 +2,15 @@
 <html lang="en">
   <head>
     <%- include("../partials/head"); %>
-    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/ax.css" />
   </head>
 
   <body>
     <%- include("../partials/nav") %>
-    <div class="vh-100 text-center valign-center" id="banner">
+    <div
+      class="min-vh-100 pt-1 pb-4 d-flex text-center flex-wrap align-items-center text-gray-700"
+      id="banner"
+    >
       <div class="row">
         <div class="col-12">
           <div class="container">
@@ -34,14 +37,21 @@
               <br />
               讓我為您服務
             </p>
+            <button
+              class="btn-scroll-down-to"
+              type="button"
+              data-target="#action-section"
+            >
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
           </div>
         </div>
       </div>
-      <button class="btn-scroll-down-to" type="button" data-target="#action-section">
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
     </div>
-    <div class="vh-100 text-center valign-center" id="action-section">
+    <div
+      class="min-vh-100 pt-4 pb-4 d-flex text-center align-items-center bg-gray-200"
+      id="action-section"
+    >
       <div class="row">
         <div class="col-12">
           <div class="container">

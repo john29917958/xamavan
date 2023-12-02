@@ -180,3 +180,33 @@ footer {
     @include max-lines(2);
   }
 }
+
+@media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "md")) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xl")) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xxl")) {
+  .container {
+    max-width: 1320px;
+  }
+}
