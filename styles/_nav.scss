@@ -261,18 +261,19 @@ nav.nav.toggled {
   }
 }
 
+html:has(nav.nav) {
+  scroll-padding-top: $nav-height;
+}
+
+body:has(nav.nav) {
+  margin-top: $nav-height;
+  scroll-padding-top: $nav-height;
+}
+
 @media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
   nav.nav.toggled {
     .nav-cover {
       display: none;
     }
   }
-}
-
-.nav-area {
-  width: 100%;
-  height: $nav-height;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
