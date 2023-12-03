@@ -15,14 +15,37 @@
   @include make-container();
 }
 
+@media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
+  .container {
+    @include make-container(1.5rem);
+    max-width: 540px;
+  }
+}
+
 @media only screen and (min-width: map.get($grid-breakpoints, "md")) {
   .container {
-    @include make-container(10rem);
+    @include make-container(1.5rem);
+    max-width: 720px;
   }
 }
 
 @media only screen and (min-width: map.get($grid-breakpoints, "lg")) {
   .container {
-    @include make-container(30rem);
+    @include make-container(1.5rem);
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xl")) {
+  .container {
+    @include make-container(1.5rem);
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: map.get($grid-breakpoints, "xxl")) {
+  .container {
+    @include make-container(1.5rem);
+    max-width: 1320px;
   }
 }
