@@ -13,12 +13,15 @@ const scrollDownToButton = {
       const target: string | null | undefined =
         button.getAttribute("data-target");
       if (target !== null && target !== undefined) {
-        const targetElem: Element | null | undefined =
-          document.querySelector(target);
-        const top = targetElem?.getBoundingClientRect().top;
+        const targetElem: HTMLElement = document.querySelector(
+          target
+        ) as HTMLElement;
         button.addEventListener("click", () => {
           window.scrollTo({
-            top: top,
+            top:
+              targetElem.offsetTop -
+              5 *
+                parseFloat(getComputedStyle(document.documentElement).fontSize),
             left: 0,
             behavior: "smooth",
           });
