@@ -130,4 +130,5 @@ dist
 .pnp.*
 
 # Built assets from webpack and SASS
-public/
+public/js
+public/css
