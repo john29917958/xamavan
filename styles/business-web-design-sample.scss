@@ -9,14 +9,12 @@ $primary: #a0c6d9;
 }
 
 #banner-2 {
-  color: $white;
   background-image: url("https://picsum.photos/1366/768?random=1");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 #section-1 {
-  color: $text-default;
   padding-top: 5rem;
   padding-bottom: 5rem;
 
@@ -27,7 +25,6 @@ $primary: #a0c6d9;
 
 #banner {
   width: 100%;
-  color: $white;
   background-image: url("https://picsum.photos/1366/768?random=2");
   background-size: cover;
   background-repeat: no-repeat;
