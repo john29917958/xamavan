@@ -13,25 +13,28 @@ body {
   line-height: $headings-line-height;
 }
 
-h1 {
+h1,
+.h1 {
   @extend %heading;
   font-size: map.get($font-sizes, 1);
   line-height: $headings-line-height;
 }
 
-h2 {
+h2,
+.h2 {
   @extend %heading;
   font-size: map.get($font-sizes, 2);
   line-height: $headings-line-height;
 }
 
-h3 {
+h3,
+.h3 {
   @extend %heading;
   font-size: map.get($font-sizes, 3);
   line-height: $headings-line-height;
 }
 
-h4 {
+h4,.h4 {
   @extend %heading;
   font-size: map.get($font-sizes, 4);
   line-height: $headings-line-height;
@@ -64,7 +67,7 @@ a:hover {
   color: color.scale($primary, $lightness: 20%);
 }
 
-.bold {
+b,.bold {
   font-weight: bold;
 }
 
