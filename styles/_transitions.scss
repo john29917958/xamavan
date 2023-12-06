@@ -1,0 +1,18 @@
+@keyframes zoom-in-from-large-example {
+  0% {
+    display: inline-block;
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  99.9% {
+    display: inline-block;
+  }
+
+  100% {
+  }
+}
+
+.test-zoom-in-from-large-example-animation {
+  animation: zoom-in-from-large-example 0.8s ease;
+}
