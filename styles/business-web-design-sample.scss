@@ -1,12 +1,9 @@
 @use "sass:map";
 
 $primary: #a0c6d9;
+$text-primary: #a0c6d9;
 
 @import "ax";
-
-.text-primary {
-  color: #a0c6d9;
-}
 
 #banner-2 {
   background-image: url("https://picsum.photos/1366/768?random=1");
