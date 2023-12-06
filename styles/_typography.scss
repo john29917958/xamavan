@@ -5,6 +5,7 @@ html,
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: $font-size-base;
+  line-height: $line-height-base;
 }
 
 %heading {
@@ -13,46 +14,51 @@ body {
   line-height: $headings-line-height;
 }
 
-h1 {
+h1,
+.h1 {
   @extend %heading;
-  font-size: map.get($font-sizes, 1);
+  @include font-size(map.get($font-sizes, 1));
   line-height: $headings-line-height;
 }
 
-h2 {
+h2,
+.h2 {
   @extend %heading;
-  font-size: map.get($font-sizes, 2);
+  @include font-size(map.get($font-sizes, 2));
   line-height: $headings-line-height;
 }
 
-h3 {
+h3,
+.h3 {
   @extend %heading;
-  font-size: map.get($font-sizes, 3);
+  @include font-size(map.get($font-sizes, 3));
   line-height: $headings-line-height;
 }
 
-h4 {
+h4,
+.h4 {
   @extend %heading;
-  font-size: map.get($font-sizes, 4);
+  @include font-size(map.get($font-sizes, 4));
   line-height: $headings-line-height;
 }
 
-h5 {
+h5,
+.h5 {
   @extend %heading;
-  font-size: map.get($font-sizes, 5);
+  @include font-size(map.get($font-sizes, 5));
   line-height: $headings-line-height;
 }
 
-h6 {
+h6,
+.h6 {
   @extend %heading;
-  font-size: map.get($font-sizes, 6);
+  @include font-size(map.get($font-sizes, 6));
   line-height: $headings-line-height;
 }
 
 p {
   margin-bottom: $font-size-base;
   font-weight: $font-weight-base;
-  line-height: $line-height-base;
 }
 
 a {
@@ -64,6 +70,7 @@ a:hover {
   color: color.scale($primary, $lightness: 20%);
 }
 
+b,
 .bold {
   font-weight: bold;
 }

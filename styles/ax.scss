@@ -1,9 +1,10 @@
-@import "variables";
 @import "reset";
-@import "grid";
+@import "variables";
+@import "mixins";
 @import "typography";
 @import "container";
-@import "nav";
+@import "grid";
 @import "button";
-@import "utilities";
+@import "nav";
 @import "footer";
+@import "utilities";
