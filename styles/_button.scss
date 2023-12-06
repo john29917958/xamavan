@@ -1,14 +1,23 @@
 .btn {
-  @include reset-elem;
-
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
   font-size: $font-size-base;
+  background-color: transparent;
+  color: $text-default;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 0.1rem solid $text-default;
+  border-radius: 0.1rem;
+  transition: all ease 0.3s;
+}
+
+.btn.btn-primary {
   background-color: $primary;
   color: $white;
-  border-radius: 0.1rem;
-  padding: 0.9rem 1.5rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all ease 0.3s;
+  border-color: $primary;
 }
 
 .btn:hover {
@@ -21,16 +30,33 @@
 
 .btn.btn-outline {
   background-color: transparent;
+  color: $text-default;
   border-style: solid;
   border-width: 0.1rem;
-  border-color: $white;
+  border-color: $text-default;
 }
 
 .btn.btn-outline:hover {
-  background-color: rgba($color: $white, $alpha: 0.2);
+  color: $text-default;
+  background-color: rgba($color: $text-default, $alpha: 0.2);
 }
 
 .btn.btn-outline:active {
+  color: $text-default;
+  background-color: rgba($color: $text-default, $alpha: 0.3);
+}
+
+.btn.btn-outline-white {
+  background-color: transparent;
+  color: $white;
+  border-color: $white;
+}
+
+.btn.btn-outline-white:hover {
+  background-color: rgba($color: $white, $alpha: 0.2);
+}
+
+.btn.btn-outline-white:active {
   background-color: rgba($color: $white, $alpha: 0.3);
 }
 

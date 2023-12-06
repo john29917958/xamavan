@@ -5,6 +5,7 @@ html,
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: $font-size-base;
+  line-height: $line-height-base;
 }
 
 %heading {
@@ -58,7 +59,6 @@ h6,
 p {
   margin-bottom: $font-size-base;
   font-weight: $font-weight-base;
-  line-height: $line-height-base;
 }
 
 a {
