@@ -37,6 +37,7 @@ function getBgCanvas(): HTMLCanvasElement {
   canvas.style.zIndex = "-1";
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
+  canvas.classList.add("trans-entrance-fade-in", "trans-d-1500");
   return canvas;
 }
 
