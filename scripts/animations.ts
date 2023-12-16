@@ -8,6 +8,12 @@ const animations = {
       const canvas: HTMLCanvasElement = getBgCanvas();
       initNetworkBgAnimation(canvas);
       elem.append(canvas);
+      const elemAsHtml: HTMLElement = elem as HTMLElement;
+      if (elemAsHtml.style.position.length === 0) {
+        // Set parent element position for canvas to be positioned with it.
+        // TODO: Extract the code to a readable function.
+        elemAsHtml.style.position = "relative";
+      }
     }
   },
 };
@@ -98,7 +104,7 @@ function initNetworkBgAnimation(canvas: HTMLCanvasElement) {
     for (var i = 0, x = stars.length; i < x; i++) {
       var s = stars[i];
 
-      ctx.fillStyle = "rgb(242,242,242)";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.035)";
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
       ctx.fill();
@@ -119,7 +125,7 @@ function initNetworkBgAnimation(canvas: HTMLCanvasElement) {
       }
     }
     ctx.lineWidth = 1;
-    ctx.strokeStyle = "rgb(247,247,247)";
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.03)";
     ctx.stroke();
   }
 
