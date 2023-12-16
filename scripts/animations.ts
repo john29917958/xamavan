@@ -61,7 +61,7 @@ function initNetworkBgAnimation(canvas: HTMLCanvasElement) {
   }
   let stars: Star[] = [], // Array that contains the stars
     FPS = 60, // Frames per second
-    x = 100, // Number of stars
+    x = getNumOfStars(), // Number of stars
     mouse = {
       x: 0,
       y: 0,
@@ -72,26 +72,37 @@ function initNetworkBgAnimation(canvas: HTMLCanvasElement) {
     stars.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      radius: Math.random() * 1 + 2,
+      radius: Math.random() * 1 + 5,
       vx: Math.floor(Math.random() * 50) - 25,
       vy: Math.floor(Math.random() * 50) - 25,
     });
   }
 
+  window.addEventListener("resize", resize);
+  function getNumOfStars() {
+    const numOfStars = window.innerWidth <= 576 ? 47 : 100;
+    return numOfStars;
+  }
+  function resize() {
+    x = getNumOfStars();
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+
   // Draw the scene
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.globalCompositeOperation = "lighter";
+    //ctx.globalCompositeOperation = "lighter";
 
     for (var i = 0, x = stars.length; i < x; i++) {
       var s = stars[i];
 
-      ctx.fillStyle = "rgba(210, 210, 210, 0.2)";
+      ctx.fillStyle = "rgb(248,248,248)";
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
       ctx.fill();
-      ctx.fillStyle = "rgba(200, 200, 200, 0.2)";
-      ctx.stroke();
+      // ctx.fillStyle = "#fafafa";
+      // ctx.stroke();
     }
 
     ctx.beginPath();
@@ -106,8 +117,8 @@ function initNetworkBgAnimation(canvas: HTMLCanvasElement) {
         }
       }
     }
-    ctx.lineWidth = 0.4;
-    ctx.strokeStyle = "rgba(230, 230, 230, 0.7)";
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "rgb(245,245,245)";
     ctx.stroke();
   }
 
