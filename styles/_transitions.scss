@@ -1,0 +1,66 @@
+@keyframes trans-entrance-fade-in-delay-wait-state {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes trans-entrance-shrink-fade-in {
+  0% {
+    display: inline-block;
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  99.9% {
+    display: inline-block;
+  }
+
+  100% {
+  }
+}
+
+.trans-entrance-shrink-fade-in {
+  animation: trans-entrance-shrink-fade-in 0.8s ease;
+}
+
+@keyframes trans-entrance-float-in {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+
+  to {
+  }
+}
+
+.trans-entrance-float-in {
+  animation: trans-entrance-float-in 0.8s ease;
+}
+
+@for $i from 0 through 5 {
+  @for $j from 1 through 4 {
+    $delayInMs: ($i * 100 + $j * 25) * 10;
+
+    .trans-d-#{$delayInMs} {
+      animation-delay: #{$delayInMs}ms;
+    }
+
+    .trans-entrance-shrink-fade-in.trans-d-#{$delayInMs} {
+      animation: trans-entrance-fade-in-delay-wait-state #{$delayInMs}ms,
+        trans-entrance-shrink-fade-in 0.8s ease #{$delayInMs}ms;
+    }
+
+    .trans-entrance-float-in.trans-d-#{$delayInMs} {
+      animation: trans-entrance-fade-in-delay-wait-state #{$delayInMs}ms,
+        trans-entrance-float-in 0.8s ease #{$delayInMs}ms;
+    }
+  }
+}
+
+.trans-on-viewport-entry {
+  animation-play-state: paused;
+}
