@@ -73,7 +73,7 @@ function initNetworkBgAnimation(canvas: HTMLCanvasElement) {
     stars.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      radius: Math.random() * 1 + 5,
+      radius: Math.random() * 1 + 4.5,
       vx: Math.floor(Math.random() * 50) - 25,
       vy: Math.floor(Math.random() * 50) - 25,
     });
@@ -98,7 +98,7 @@ function initNetworkBgAnimation(canvas: HTMLCanvasElement) {
     for (var i = 0, x = stars.length; i < x; i++) {
       var s = stars[i];
 
-      ctx.fillStyle = "rgb(248,248,248)";
+      ctx.fillStyle = "rgb(242,242,242)";
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
       ctx.fill();
@@ -119,7 +119,7 @@ function initNetworkBgAnimation(canvas: HTMLCanvasElement) {
       }
     }
     ctx.lineWidth = 1;
-    ctx.strokeStyle = "rgb(245,245,245)";
+    ctx.strokeStyle = "rgb(247,247,247)";
     ctx.stroke();
   }
 
