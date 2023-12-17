@@ -96,6 +96,7 @@ class Animator {
 
   private updateCanvasOnResize(canvas: HTMLCanvasElement) {
     this.options.numOfStars = getNumOfStars();
+    this.options.lineWidth = getLineWidth();
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
   }
@@ -122,7 +123,7 @@ class Animator {
 
     for (var i = 0, x = this.stars.length; i < x; i++) {
       var s = this.stars[i];
-      this.ctx!.fillStyle = "rgba(0, 0, 0, 0.035)";
+      this.ctx!.fillStyle = "rgba(0, 0, 0, 0.025)";
       this.ctx!.beginPath();
       this.ctx!.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
       this.ctx!.fill();
@@ -142,8 +143,8 @@ class Animator {
         }
       }
     }
-    this.ctx!.lineWidth = 1;
-    this.ctx!.strokeStyle = "rgba(0, 0, 0, 0.03)";
+    this.ctx!.lineWidth = this.options.lineWidth;
+    this.ctx!.strokeStyle = "rgba(0, 0, 0, 0.025)";
     this.ctx!.stroke();
   }
 
@@ -170,16 +171,23 @@ class Animator {
 class Options {
   public fps: number; // Frames per second
   public numOfStars: number; // Number of stars
+  public lineWidth: number;
 
   public constructor() {
     this.fps = 60;
     this.numOfStars = getNumOfStars();
+    this.lineWidth = getLineWidth();
   }
 }
 
 function getNumOfStars(): number {
   const numOfStars = window.innerWidth <= 576 ? 47 : 100;
   return numOfStars;
+}
+
+function getLineWidth(): number {
+  const lineWidth = window.innerWidth <= 576 ? 0.75 : 1.2;
+  return lineWidth;
 }
 
 export { NetworkBackgroundAnimation };
