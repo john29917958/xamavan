@@ -8,6 +8,24 @@
   }
 }
 
+.trans-entrance-fade-in {
+  animation: trans-entrance-fade-in 0.8s ease;
+}
+
+@keyframes trans-entrance-fade-in {
+  0% {
+    display: inline-block;
+    opacity: 0;
+  }
+
+  99.9% {
+    display: inline-block;
+  }
+
+  100% {
+  }
+}
+
 @keyframes trans-entrance-shrink-fade-in {
   0% {
     display: inline-block;
@@ -47,6 +65,11 @@
 
     .trans-d-#{$delayInMs} {
       animation-delay: #{$delayInMs}ms;
+    }
+
+    .trans-entrance-fade-in.trans-d-#{$delayInMs} {
+      animation: trans-entrance-fade-in-delay-wait-state #{$delayInMs}ms,
+        trans-entrance-fade-in 0.8s ease #{$delayInMs}ms;
     }
 
     .trans-entrance-shrink-fade-in.trans-d-#{$delayInMs} {

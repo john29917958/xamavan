@@ -1,6 +1,7 @@
 import { navbar } from "./navbar";
 import { scrollDownToButton } from "./scrollDownToButton";
 import { transition } from "./transition";
+import { animations } from "./animations";
 
 window.addEventListener("load", () => {
   const navbars: NodeListOf<Element> = document.querySelectorAll("nav.nav");
@@ -9,4 +10,5 @@ window.addEventListener("load", () => {
   }
   scrollDownToButton.init();
   transition.init();
+  animations.initNetworkBgAnimation();
 });
