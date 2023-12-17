@@ -129,6 +129,19 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
 # Built assets from webpack and SASS
 public/js
 public/css
