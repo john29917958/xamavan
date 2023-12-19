@@ -2,11 +2,11 @@
 
 @mixin make-container($gutter: 1.5rem) {
   box-sizing: border-box;
-  --ax-gutter-x: #{$gutter};
-  --ax-gutter-y: 0;
+  --xamavan-gutter-x: #{$gutter};
+  --xamavan-gutter-y: 0;
   width: 100%;
-  padding-right: calc(var(--ax-gutter-x) * 0.5);
-  padding-left: calc(var(--ax-gutter-x) * 0.5);
+  padding-right: calc(var(--xamavan-gutter-x) * 0.5);
+  padding-left: calc(var(--xamavan-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
 }

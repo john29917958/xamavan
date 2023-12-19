@@ -19,19 +19,19 @@
     "start": "node server.js",
     "watchjs": "webpack --config webpack.config.js --watch --progress"
   },
-  "name": "business-image-website",
+  "name": "xamavan",
   "description": "A business image website reference.",
   "version": "1.0.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/john29917958/business-image-website.git"
+    "url": "git+https://github.com/john29917958/xamavan.git"
   },
   "keywords": [],
-  "author": "AX",
+  "author": "Tzu-Chao Wang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/john29917958/business-image-website/issues"
+    "url": "https://github.com/john29917958/xamavan/issues"
   },
-  "homepage": "https://github.com/john29917958/business-image-website#readme"
+  "homepage": "https://github.com/john29917958/xamavan#readme"
 }
