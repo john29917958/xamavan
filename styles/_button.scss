@@ -15,7 +15,7 @@
 }
 
 .btn:hover {
-  filter: brightness(105%);
+  filter: brightness(108%);
 }
 
 .btn:active {
@@ -28,7 +28,7 @@
   border-color: $primary;
 }
 
-.btn.btn-primary:hover {
+.btn.btn-primary:active {
   box-shadow: 0 0 3px 2px #{$primary}80;
 }
 
