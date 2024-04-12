@@ -1,13 +1,19 @@
 const express = require("express");
+const expressLayouts = require("express-ejs-layouts");
 const https = require("https");
 const fs = require("fs");
+const path = require("path");
 const process = require("process");
 const app = express();
 const indexRouter = require("./routes/index");
 const portfolioRouter = require("./routes/portfolio");
 
-app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(expressLayouts);
+app.set("layout", path.join(__dirname, "views", "layouts", "layout"));
+app.set("layout extractScripts", true);
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 app.use("/", indexRouter);
 app.use("/portfolio", portfolioRouter);
