@@ -7,8 +7,22 @@
         </div>
         <div class="nav-content">
           <ul>
-            <li><a class="active" href="/">Home</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
+            <li>
+              <a
+                <%- UrlHelper.isAtRoot() ? "class=\"active\"" : "" %>
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                <%- UrlHelper.isAtRoute("/portfolio") ? "class=\"active\"" : "" %>
+                href="/portfolio"
+              >
+                Portfolio
+              </a>
+            </li>
           </ul>
         </div>
         <button class="nav-toggler" type="button">

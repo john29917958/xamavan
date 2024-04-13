@@ -7,9 +7,12 @@ const process = require("process");
 const app = express();
 const indexRouter = require("./routes/index");
 const portfolioRouter = require("./routes/portfolio");
+const urlHelperMiddleware = require("./middlewares/urlHelperMiddleware");
 
 app.use(express.static("public"));
 app.use(expressLayouts);
+app.use(urlHelperMiddleware());
+
 app.set("layout", path.join(__dirname, "views", "layouts", "layout"));
 app.set("layout extractScripts", true);
 app.set("view engine", "ejs");
