@@ -7,16 +7,21 @@
         </div>
         <div class="nav-content">
           <ul>
-            <li><a class="active" href="/">Home</a></li>
-            <li class="dropdown">
-              <a class="dropdown-toggle">Portfolio</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="/portfolio/business-web-design-sample">
-                    Business Web Sample
-                  </a>
-                </li>
-              </ul>
+            <li>
+              <a
+                <%- UrlHelper.isAtRoot() ? "class=\"active\"" : "" %>
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                <%- UrlHelper.isAtRoute("/portfolio") ? "class=\"active\"" : "" %>
+                href="/portfolio"
+              >
+                Portfolio
+              </a>
             </li>
           </ul>
         </div>

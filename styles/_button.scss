@@ -14,18 +14,22 @@
   transition: all ease 0.3s;
 }
 
+.btn:hover {
+  filter: brightness(108%);
+}
+
+.btn:active {
+  filter: brightness(113%);
+}
+
 .btn.btn-primary {
   background-color: $primary;
   color: $white;
   border-color: $primary;
 }
 
-.btn:hover {
-  filter: brightness(105%);
-}
-
-.btn:active {
-  filter: brightness(113%);
+.btn.btn-primary:active {
+  box-shadow: 0 0 3px 2px #{$primary}80;
 }
 
 .btn.btn-outline {
