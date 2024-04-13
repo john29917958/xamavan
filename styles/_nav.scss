@@ -47,7 +47,7 @@ nav.nav {
           }
 
           *:hover {
-            color: $black;
+            color: $text-primary;
           }
 
           @media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
