@@ -281,12 +281,12 @@ nav.nav.toggled {
 }
 
 html:has(nav.nav) {
-  scroll-padding-top: calc($nav-height + 14px);
+  scroll-padding-top: $nav-height;
 }
 
 body:has(nav.nav) {
-  margin-top: calc($nav-height + 14px);
-  scroll-padding-top: calc($nav-height + 14px);
+  margin-top: $nav-height;
+  scroll-padding-top: $nav-height;
 }
 
 @media only screen and (min-width: map.get($grid-breakpoints, "sm")) {
