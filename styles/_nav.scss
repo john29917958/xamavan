@@ -97,29 +97,29 @@ nav.nav {
                 transition: all ease 0.3s;
               }
 
-              a::before {
-                content: "";
-                display: block;
-                position: absolute;
-                left: 50%;
-                bottom: 3px;
-                width: 0;
-                height: 2px;
-                background-color: $white;
-                transition: all 0.3s ease;
-              }
+              // a::before {
+              //   content: "";
+              //   display: block;
+              //   position: absolute;
+              //   left: 50%;
+              //   bottom: 3px;
+              //   width: 0;
+              //   height: 2px;
+              //   background-color: $white;
+              //   transition: all 0.3s ease;
+              // }
 
-              a::after {
-                content: "";
-                display: block;
-                position: absolute;
-                left: 50%;
-                top: 3px;
-                width: 0;
-                height: 2px;
-                background-color: $white;
-                transition: all 0.3s ease;
-              }
+              // a::after {
+              //   content: "";
+              //   display: block;
+              //   position: absolute;
+              //   left: 50%;
+              //   top: 3px;
+              //   width: 0;
+              //   height: 2px;
+              //   background-color: $white;
+              //   transition: all 0.3s ease;
+              // }
 
               a.active {
                 color: $link-text-active;
@@ -142,6 +142,7 @@ nav.nav {
             li.dropdown {
               a.dropdown-toggle::after {
                 content: "";
+                position: static;
                 display: inline-block;
                 border-top: 0.3rem solid;
                 border-right: 0.3rem solid transparent;
@@ -149,7 +150,7 @@ nav.nav {
                 border-left: 0.3rem solid transparent;
                 vertical-align: 0.255rem;
                 margin-left: 0.6rem;
-                transition: all ease 0.3s;
+                transition: transform ease 0.3s;
               }
 
               .dropdown-menu {
