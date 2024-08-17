@@ -194,6 +194,12 @@
   height: calc(100vh - $nav-height);
 }
 
+@for $i from 1 through 4 {
+  .w-#{$i * 25} {
+    width: calc(25% * #{$i});
+  }
+}
+
 .min-vh-100 {
   min-height: calc(100vh - $nav-height);
 }
