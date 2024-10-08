@@ -9,7 +9,7 @@ const indexRouter = require("./routes/index");
 const portfolioRouter = require("./routes/portfolio");
 const urlHelperMiddleware = require("./middlewares/urlHelperMiddleware");
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "/public")));
 app.use(expressLayouts);
 app.use(urlHelperMiddleware());
 
